@@ -1,0 +1,21 @@
+# 문제 : 1이상 K이하의 숫자를 하나 고르는 행위를 N번 반복하여 나올 수 있는 모든 서로 다른 순서쌍을 구해주는 프로그램을 작성해보세요.
+#       예를 들어 K가 3, N이 2인 경우 다음과 같이 9개의 조합이 가능합니다. (ex. 1 1, 1 2, 1 3, 2 1, ..., 3 2, 3 3)
+
+K, N = map(int, input().split())
+
+numbers = []
+for i in range(1,K+1): numbers.append(i)
+
+def backtrack(current):
+    if len(current) == N:
+        for num in current:
+            print(num, end = ' ')
+        print()
+        return
+
+    for i in range(K):
+        current.append(numbers[i])
+        backtrack(current)
+        current.pop()
+
+backtrack([])
