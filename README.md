@@ -1,2 +1,2 @@
 # Algorithm
-This is an auto push repository for Baekjoon Online Judge created with [BaekjoonHub](https://github.com/BaekjoonHub/BaekjoonHub).
+교내, 교외 코테 사이트에서 푼 문제를 정리하고 있습니다.
